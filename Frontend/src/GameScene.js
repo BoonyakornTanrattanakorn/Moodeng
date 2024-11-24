@@ -105,7 +105,7 @@ class GameScene extends Phaser.Scene {
             this.distantLand.tilePositionX += 0.6; // Move at medium speed
             this.foreground.tilePositionX += 0.6;
 
-            if (Phaser.Input.Keyboard.JustDown(this.shootKey) && this.canShoot) {
+            if (this.shootKey.isDown && this.canShoot) {
                 this.shootFruit();
                 this.canShoot = false; // Disable shooting
                 this.time.delayedCall(this.shootDelay, () => {
